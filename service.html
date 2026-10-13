@@ -1,82 +1,123 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#173b33">
-<meta name="description" content="Full-service auto repair and maintenance with clear recommendations and dependable local care.">
-<title>AutoCare Garage — Considered Care for Every Mile</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=considered-premium-20261013">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173b32">
+  <meta name="description" content="Explore automotive maintenance, repair, and diagnostic services.">
+  <title>AutoCare Garage | Auto Repair &amp; Maintenance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=human-crafted-20261013">
 </head>
 <body>
-<div class="utility-bar" id="top"><div class="container utility-inner"><div class="utility-left"><span class="utility-dot"></span><span>AutoCare Garage</span><span class="utility-separator">|</span><a href="#contact">Add shop phone number</a></div><div class="utility-links"><a href="#community">Careers</a><span></span><a href="#contact">Contact Us</a></div></div></div>
-<div class="location-strip"><div class="container location-inner"><div class="location-current"><span class="location-pin">⌖</span><span><small>YOUR LOCAL AUTO REPAIR SHOP</small><b>Add Your City, State</b></span></div><a class="location-change" href="#contact">Change Location <span>⌄</span></a><div class="location-hours"><span class="hours-dot"></span> Dependable service for every mile</div></div></div>
+
+<div class="utility-bar" id="top">
+  <div class="container utility-inner">
+    <span>AutoCare Garage <span class="utility-divider">/</span> Automotive service &amp; repair</span>
+    <a href="#appointment">Request a service visit <span aria-hidden="true">↗</span></a>
+  </div>
+</div>
 <header class="site-header">
- <div class="container header-inner">
-  <a class="brand" href="index.html" aria-label="AutoCare Garage home"><span class="brand-mark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 29h32l-3.2-10.2a4 4 0 0 0-3.8-2.8H15a4 4 0 0 0-3.8 2.8L8 29Z" fill="none" stroke="currentColor" stroke-width="2.8"/><path d="M11 29v7h5v-3h16v3h5v-7M14 24h20M17 16l2-5h10l2 5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15" cy="29" r="2" fill="currentColor"/><circle cx="33" cy="29" r="2" fill="currentColor"/></svg></span><span class="brand-type"><strong>AutoCare</strong><small>GARAGE &amp; SERVICE</small></span></a>
-  <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
-  <nav class="main-nav" id="primary-nav" aria-label="Main navigation">
-   <a href="index.html">Home</a>
-   <div class="nav-item has-mega"><button class="nav-trigger" aria-expanded="false" aria-controls="services-menu">Our Services <span class="chevron"></span></button>
-    <div class="mega-menu" id="services-menu">
-     <div class="mega-content">
-      <div class="mega-common">
-       <div class="mega-common-head"><div><span class="eyebrow dark"><i></i> COMMON SERVICES</span><p>Start with a service that fits your vehicle's needs.</p></div><a href="service.html?service=all-services" class="mega-view-all">View All Services <b>→</b></a></div>
-       <div class="mega-common-links">
-        <a href="service.html?service=check-engine-light"><span class="mega-icon">⌁</span><b>Check Engine Light</b></a>
-        <a href="service.html?service=scheduled-maintenance"><span class="mega-icon">◷</span><b>Scheduled Maintenance</b></a>
-        <a href="service.html?service=brakes"><span class="mega-icon">◉</span><b>Brakes</b></a>
-        <a href="service.html?service=ac-services"><span class="mega-icon">❄</span><b>A/C Services</b></a>
-        <a href="service.html?service=oil-filter-change"><span class="mega-icon">◌</span><b>Oil &amp; Filter Change</b></a>
-        <a href="service.html?service=batteries"><span class="mega-icon">ϟ</span><b>Batteries</b></a>
-       </div>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="AutoCare Garage home">
+      <span class="brand-word">AUTOCARE<span class="brand-period">.</span></span>
+      <span class="brand-descriptor">GARAGE &amp; SERVICE</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-home">Home</a>
+      <div class="nav-item">
+        <button class="nav-trigger" aria-expanded="false" aria-controls="services-menu">Services <span class="chevron" aria-hidden="true"></span></button>
+        <div class="mega-menu" id="services-menu">
+          <div class="mega-head">
+            <div><span class="menu-label">AUTOCARE SERVICES</span><h2>What can we help<br>you sort out?</h2><a class="menu-all" href="service.html?service=all-services">Browse all services <span>→</span></a></div>
+            <div class="mega-popular">
+              <span class="menu-label">COMMON REQUESTS</span>
+              <a href="service.html?service=brakes"><span>01</span>Brake service <b>↗</b></a>
+              <a href="service.html?service=check-engine-light"><span>02</span>Check engine light <b>↗</b></a>
+              <a href="service.html?service=oil-filter-change"><span>03</span>Oil &amp; filter change <b>↗</b></a>
+              <a href="service.html?service=scheduled-maintenance"><span>04</span>Scheduled maintenance <b>↗</b></a>
+            </div>
+          </div>
+          <div class="mega-directory">
+            <div><span class="menu-label">MAINTENANCE</span><a href="service.html?service=scheduled-maintenance">Scheduled maintenance</a><a href="service.html?service=oil-filter-change">Oil &amp; filter change</a><a href="service.html?service=tire-rotation">Tire rotation</a><a href="service.html?service=air-filtration">Air filtration</a><a href="service.html?service=tune-ups">Tune-ups</a></div>
+            <div><span class="menu-label">REPAIR</span><a href="service.html?service=brakes">Brakes</a><a href="service.html?service=engine-services">Engine services</a><a href="service.html?service=transmission-services">Transmission</a><a href="service.html?service=suspension">Suspension &amp; steering</a><a href="service.html?service=exhaust-system">Exhaust system</a></div>
+            <div><span class="menu-label">DIAGNOSTICS</span><a href="service.html?service=check-engine-light">Check engine light</a><a href="service.html?service=computer-diagnostics">Computer diagnostics</a><a href="service.html?service=electrical-system">Electrical system</a><a href="service.html?service=cooling-system">Cooling system</a><a href="service.html?service=ac-services">A/C &amp; heating</a></div>
+            <div><span class="menu-label">SPECIALTY</span><a href="service.html?service=alignment">Alignment</a><a href="service.html?service=batteries">Batteries</a><a href="service.html?service=alternator-starter">Alternator &amp; starter</a><a href="service.html?service=european-vehicle-service">European vehicles</a><a href="service.html?service=fleet-service">Fleet service</a></div>
+          </div>
+        </div>
       </div>
-      <div class="mega-directory">
-       <div class="mega-directory-heading"><span class="eyebrow dark"><i></i> OUR SERVICES</span><span>Full-service auto repair and maintenance</span></div>
-       <div class="mega-directory-columns">
-        <div><a href="service.html?service=ac-services">A/C Services</a><a href="service.html?service=air-filtration">Air Filtration</a><a href="service.html?service=alignment">Alignment</a><a href="service.html?service=auto-repair-estimates">Auto Repair Estimates</a><a href="service.html?service=alternator-starter">Alternator &amp; Starter</a><a href="service.html?service=batteries">Batteries</a><a href="service.html?service=brakes">Brakes</a><a href="service.html?service=check-engine-light">Check Engine Light</a></div>
-        <div><a href="service.html?service=computer-diagnostics">Computer Diagnostics</a><a href="service.html?service=cooling-system">Cooling System</a><a href="service.html?service=courtesy-inspections">Courtesy Inspections</a><a href="service.html?service=drivetrain">Drivetrain</a><a href="service.html?service=electrical-system">Electrical System</a><a href="service.html?service=suspension">Suspension</a><a href="service.html?service=engine-services">Engine Services</a><a href="service.html?service=exhaust-system">Exhaust System</a></div>
-        <div><a href="service.html?service=extended-warranty-service">Extended Warranty Service</a><a href="service.html?service=european-vehicle-service">European Vehicle Service</a><a href="service.html?service=fleet-service">Fleet Service</a><a href="service.html?service=fuel-system">Fuel System</a><a href="service.html?service=oil-filter-change">Oil &amp; Filter Change</a><a href="service.html?service=power-steering">Power Steering</a><a href="service.html?service=pre-purchase-inspections">Pre-Purchase Inspections</a></div>
-        <div><a href="service.html?service=scheduled-maintenance">Scheduled Maintenance</a><a href="service.html?service=tire-rotation">Tire Rotation</a><a href="service.html?service=transmission-services">Transmission Services</a><a href="service.html?service=tune-ups">Tune-Ups</a><a href="service.html?service=golf-cart-services">Golf Cart Services</a><a href="service.html?service=all-services" class="directory-highlight">View All Services <b>→</b></a></div>
-       </div>
+      <div class="nav-item">
+        <button class="nav-trigger" aria-expanded="false" aria-controls="about-menu">Our approach <span class="chevron" aria-hidden="true"></span></button>
+        <div class="simple-dropdown" id="about-menu">
+          <a href="index.html#our-approach">How we work</a>
+          <a href="index.html#difference">What to expect</a>
+          <a href="index.html#faq">Common questions</a>
+          <a href="index.html#contact">Get in touch</a>
+        </div>
       </div>
-      <div class="mega-promo-row">
-       <a class="mega-promo" href="#concierge"><span class="promo-symbol">↗</span><span><b>Convenient Concierge Service</b><small>Ask about pick-up and drop-off options for your service visit.</small></span><strong>→</strong></a>
-       <a class="mega-promo" href="#warranty"><span class="promo-symbol">✓</span><span><b>The AutoCare Confidence Promise</b><small>Clear recommendations, quality workmanship, and no mystery estimates.</small></span><strong>→</strong></a>
-      </div>
-     </div>
-    </div>
-   </div>
-   <div class="nav-item has-mega"><button class="nav-trigger" aria-expanded="false" aria-controls="about-menu">About Us <span class="chevron"></span></button>
-    <div class="mega-menu about-mega" id="about-menu"><div class="mega-content">
-     <div class="mega-common"><div class="mega-common-head"><div><span class="eyebrow dark"><i></i> COMMON SERVICES</span><p>Quick links to services drivers ask about most.</p></div><a href="service.html?service=all-services" class="mega-view-all">View All Services <b>→</b></a></div>
-      <div class="mega-common-links"><a href="service.html?service=check-engine-light"><span class="mega-icon">⌁</span><b>Check Engine Light</b></a><a href="service.html?service=scheduled-maintenance"><span class="mega-icon">◷</span><b>Scheduled Maintenance</b></a><a href="service.html?service=brakes"><span class="mega-icon">◉</span><b>Brakes</b></a><a href="service.html?service=ac-services"><span class="mega-icon">❄</span><b>A/C Services</b></a><a href="service.html?service=oil-filter-change"><span class="mega-icon">◌</span><b>Oil &amp; Filter Change</b></a><a href="service.html?service=batteries"><span class="mega-icon">ϟ</span><b>Batteries</b></a></div>
-     </div>
-     <div class="mega-directory"><div class="mega-directory-heading"><span class="eyebrow dark"><i></i> ABOUT AUTOCARE</span><span>People first. Service you can understand.</span></div><div class="mega-directory-columns about-directory">
-      <div><a href="#our-approach">Our Approach</a><a href="#community">About Our Shop</a><a href="#team">Meet the Team</a></div>
-      <div><a href="#warranty">Warranty &amp; Quality</a><a href="#faq">Car Care FAQs</a><a href="#community">Community Involvement</a></div>
-      <div><a href="#concierge">Concierge Options</a><a href="#amenities">Shop Amenities</a><a href="#reviews">Customer Feedback</a></div>
-      <div><a href="#awards">Awards &amp; Credentials</a><a href="#contact">Contact Our Team</a><a href="#appointment" class="directory-highlight">Book Service <b>→</b></a></div>
-     </div></div>
-     <div class="mega-promo-row"><a class="mega-promo" href="#concierge"><span class="promo-symbol">⌖</span><span><b>Service That Fits Your Day</b><small>Ask about local transportation and convenient drop-off.</small></span><strong>→</strong></a><a class="mega-promo" href="#warranty"><span class="promo-symbol">✓</span><span><b>Clear Work. Clear Answers.</b><small>We explain the work and next steps before you decide.</small></span><strong>→</strong></a></div>
-    </div></div>
-   </div>
-   <a href="#care-plus">Care+</a>
-   <a href="#appointment" class="header-cta">Book Service Now <span>↗</span></a>
-   <div class="header-social"><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="Instagram">◎</a></div>
-  </nav>
- </div>
+      <a href="index.html#faq">FAQs</a>
+      <a href="index.html#appointment" class="header-cta">Book service <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
 </header>
-<div class="quick-links"><div class="container quick-links-inner"><a href="index.html#appointment"><span class="quick-icon">▣</span><span><b>Schedule Your Visit</b><small>Request an appointment</small></span><strong>→</strong></a><a href="index.html#warranty"><span class="quick-icon">✓</span><span><b>The AutoCare Promise</b><small>Quality and confidence</small></span><strong>→</strong></a><a href="index.html#special-offers"><span class="quick-icon">%</span><span><b>View Special Offers</b><small>Ask about current offers</small></span><strong>→</strong></a></div></div>
 <main>
-<section class="service-page-hero"><div class="service-page-hero-bg"></div><div class="container service-page-hero-inner"><div class="breadcrumbs"><a href="index.html">Home</a><span>›</span><a href="service.html?service=all-services">Services</a><span>›</span><span id="breadcrumb-current">Auto Repair Services</span></div><div class="eyebrow light"><i></i> AUTOCARE GARAGE SERVICE GUIDE</div><h1 id="service-title">Auto Repair &amp;<br><em>Maintenance Services</em></h1><p id="service-intro">Practical help for everyday maintenance and the unexpected. Understand your options and choose the right next step for your vehicle.</p><div class="hero-buttons"><a href="index.html#appointment" class="btn btn-orange">Request an appointment <span>↗</span></a><a href="#service-details" class="btn btn-glass">What to expect <span>↓</span></a></div></div></section>
-<div class="service-breadcrumb-band"><div class="container"><span>Thoughtful maintenance</span><i></i><span>Clear recommendations</span><i></i><span>Service with care</span></div></div>
-<section class="service-detail-section section-pad" id="service-details"><div class="container service-detail-layout"><article class="service-detail-main"><div class="eyebrow dark"><i></i> SERVICE OVERVIEW</div><h2 id="service-heading">The right care for<br><em>your vehicle.</em></h2><p class="service-detail-lead" id="service-lead">Share what you're noticing and our team can help you understand the right next step.</p><p id="service-description">Every vehicle has different needs. We'll listen to your concerns, inspect what is appropriate, and talk through our findings before recommending work.</p><div class="service-benefit-grid" id="service-benefits"></div><div class="service-subsection"><h3>How the process works</h3><p>We aim to make the experience clear and manageable, from your first question through the work and follow-up.</p><div class="service-process"><article><span>01</span><div><b>Tell us what you're noticing</b><p>Share symptoms, recent changes, mileage, and any warning lights.</p></div></article><article><span>02</span><div><b>Inspect and explain</b><p>We'll review the issue and walk through relevant findings and options.</p></div></article><article><span>03</span><div><b>Approve the next step</b><p>Discuss the estimate, timing, and any questions before authorizing repairs.</p></div></article></div></div><div class="service-detail-note"><span>i</span><p>Service availability, pricing, certifications, warranty coverage, and appointment timing depend on the actual shop. Confirm those details before publishing or booking.</p></div></article>
-<aside class="service-detail-sidebar"><div class="service-sidebar-card"><span class="sidebar-icon">✦</span><span class="eyebrow dark"><i></i> LET'S TALK ABOUT IT</span><h3>Have a question<br>about your vehicle?</h3><p>Tell us what you're experiencing. The team can help you identify a useful starting point.</p><a class="btn btn-orange" href="index.html#appointment">Request a visit <span>→</span></a><div class="sidebar-contact"><b>Prefer a conversation?</b><small>Add the verified shop phone number.</small></div></div><div class="sidebar-service-list"><h3>Explore more services</h3><div id="related-services"></div><a class="sidebar-all" href="service.html?service=all-services">All services <b>→</b></a></div></aside></div></section>
-<section class="service-faq-section"><div class="container service-faq-layout"><div><div class="eyebrow dark"><i></i> BEFORE YOU BOOK</div><h2>Helpful to<br><em>know first.</em></h2><p>Each vehicle and repair situation is different. These are good questions to discuss with the shop.</p></div><div class="faq-list"><details><summary>Will you explain what the vehicle needs?<span>+</span></summary><p>Ask for a clear explanation of the inspection findings, why the service is recommended, and what the next steps are before authorizing work.</p></details><details><summary>Can I get an estimate first?<span>+</span></summary><p>Ask the shop to review the estimate and any diagnostic fees, parts, labor, and timing before work begins.</p></details><details><summary>How do I know if this service is needed now?<span>+</span></summary><p>Share any symptoms and ask the technician to distinguish urgent safety concerns from maintenance that can be planned for later.</p></details></div></div></section>
-<section class="service-next-cta"><div class="container service-next-inner"><div><div class="eyebrow light"><i></i> READY FOR A CLEAR NEXT STEP?</div><h2>Let's take a look<br><em>together.</em></h2></div><a href="index.html#appointment" class="btn btn-light">Request an appointment <span>↗</span></a></div></section>
+  <section class="service-page-hero">
+    <div class="service-hero-image"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1800&q=85" alt="Vehicle in an automotive service bay"></div>
+    <div class="container service-page-hero-inner">
+      <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><a href="service.html?service=all-services">Services</a><span>/</span><span id="breadcrumb-current">Auto Repair Services</span></div>
+      <p class="eyebrow"><span></span> SERVICE GUIDE</p>
+      <h1 id="service-title">Auto Repair &amp;<br><em>Maintenance Services</em></h1>
+      <p id="service-intro">Practical help for everyday maintenance and the unexpected. Understand your options and choose a useful next step for your vehicle.</p>
+      <div class="service-hero-actions"><a href="index.html#appointment" class="button button-primary">Request an appointment <span>↗</span></a><a href="#service-details" class="button button-text">About this service <span>↓</span></a></div>
+    </div>
+  </section>
+  <div class="service-facts"><div class="container"><span>Maintenance &amp; repair</span><i></i><span>Clear explanations</span><i></i><span>Appointment by request</span></div></div>
+  <section class="service-detail-section" id="service-details">
+    <div class="container service-detail-layout">
+      <article class="service-detail-main">
+        <p class="eyebrow"><span></span> SERVICE OVERVIEW</p>
+        <h2 id="service-heading">A better understanding<br><em>of what comes next.</em></h2>
+        <p class="service-detail-lead" id="service-lead">Tell us what you're noticing and we'll help you understand the right next step.</p>
+        <p id="service-description">Every vehicle and repair concern is different. We'll listen to what is happening and explain the options available for your vehicle.</p>
+        <div class="service-benefit-grid" id="service-benefits"></div>
+        <div class="service-subsection">
+          <h3>How to approach the repair</h3>
+          <p>Before booking, gather the details you have noticed and ask what the inspection will cover, whether diagnosis has a fee, and when you can expect an estimate.</p>
+          <div class="service-process">
+            <article><span>01</span><div><b>Describe the concern</b><p>Share symptoms, mileage, recent changes, and any warning lights.</p></div></article>
+            <article><span>02</span><div><b>Review the findings</b><p>Ask what the technician found and why the service is recommended.</p></div></article>
+            <article><span>03</span><div><b>Decide how to proceed</b><p>Discuss cost and timing before authorizing the work.</p></div></article>
+          </div>
+        </div>
+        <div class="service-detail-note"><b>A useful question to ask:</b> “What happens if I wait on this repair?” The answer should help you understand urgency, safety, and what can be planned for later.</div>
+      </article>
+      <aside class="service-detail-sidebar">
+        <div class="service-sidebar-card"><p class="eyebrow"><span></span> HAVE A QUESTION?</p><h3>Start with what<br>you've noticed.</h3><p>You don't need to know the technical name for a problem to ask about it.</p><a class="button button-primary" href="index.html#appointment">Request an appointment <span>↗</span></a><a class="sidebar-faq-link" href="index.html#faq">Read common questions <span>→</span></a></div>
+        <div class="sidebar-service-list"><h3>Related services</h3><div id="related-services"></div><a class="sidebar-all" href="service.html?service=all-services">Browse every service <span>→</span></a></div>
+      </aside>
+    </div>
+  </section>
+  <section class="service-faq-section"><div class="container service-faq-layout"><div><p class="eyebrow"><span></span> BEFORE YOU BOOK</p><h2>Helpful things<br><em>to ask first.</em></h2><p>The details depend on the vehicle and the repair. These questions are a practical starting point.</p></div><div class="faq-list"><details><summary>Can you explain the recommendation? <span>+</span></summary><p>Ask for a plain-language explanation of the findings, why the work is recommended, and whether there are other options.</p></details><details><summary>Will I know the cost before work starts? <span>+</span></summary><p>Ask the shop to review diagnostic charges, labor, parts, and the estimate before authorizing repair work.</p></details><details><summary>How urgent is the repair? <span>+</span></summary><p>Ask which concerns affect safety or reliability now and which maintenance items may be planned for later. The answer depends on the vehicle's condition.</p></details></div></div></section>
+  <section class="service-next-cta"><div class="container service-next-inner"><div><p class="eyebrow"><span></span> READY TO TALK IT THROUGH?</p><h2>Let's start with<br><em>your vehicle.</em></h2></div><a href="index.html#appointment" class="button button-primary">Request a service visit <span>↗</span></a></div></section>
 </main>
-<footer class="site-footer" id="contact"><div class="container footer-main"><div class="footer-brand-col"><a class="brand brand-inverse" href="index.html"><span class="brand-mark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 29h32l-3.2-10.2a4 4 0 0 0-3.8-2.8H15a4 4 0 0 0-3.8 2.8L8 29Z" fill="none" stroke="currentColor" stroke-width="2.8"/><path d="M11 29v7h5v-3h16v3h5v-7M14 24h20M17 16l2-5h10l2 5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-type"><strong>AutoCare</strong><small>GARAGE &amp; SERVICE</small></span></a><p>Thoughtful maintenance. Dependable repairs.<br>Automotive care built around people.</p><a class="footer-mail" href="index.html#appointment">Request an appointment ↗</a></div><div><h3>Our Services</h3><a href="service.html?service=brakes">Brakes</a><a href="service.html?service=engine-services">Engine services</a><a href="service.html?service=ac-services">A/C services</a><a href="service.html?service=batteries">Batteries</a><a href="service.html?service=all-services">View all services →</a></div><div><h3>About AutoCare</h3><a href="index.html#our-approach">Our approach</a><a href="index.html#difference">The AutoCare difference</a><a href="index.html#amenities">Your visit</a><a href="index.html#faq">FAQs</a><a href="index.html#reviews">Customer feedback</a></div><div><h3>Visit Our Shop</h3><p>Add actual shop address<br>City, State ZIP</p><p>Business hours<br>Replace with confirmed hours</p><p>Phone<br>Replace with verified number</p><a href="index.html#appointment" class="footer-mail">Plan a visit →</a></div></div><div class="container footer-bottom"><span>© <span id="current-year"></span> AutoCare Garage. All rights reserved.</span><span>Custom auto repair website concept</span><a href="#">Back to top ↑</a></div></footer>
-<script src="script.js"></script><script src="service.js"></script>
-</body></html>
+
+<footer class="site-footer" id="contact">
+  <div class="container footer-main">
+    <div class="footer-brand-col">
+      <a class="brand brand-inverse" href="index.html"><span class="brand-word">AUTOCARE<span class="brand-period">.</span></span><span class="brand-descriptor">GARAGE &amp; SERVICE</span></a>
+      <p>Clear answers and practical care for the miles ahead.</p>
+      <a class="footer-cta" href="index.html#appointment">Request a service visit <span>↗</span></a>
+    </div>
+    <div class="footer-links"><h3>Services</h3><a href="service.html?service=brakes">Brake service</a><a href="service.html?service=computer-diagnostics">Diagnostics</a><a href="service.html?service=oil-filter-change">Oil &amp; filter</a><a href="service.html?service=ac-services">A/C &amp; heating</a><a href="service.html?service=all-services">All services <span>→</span></a></div>
+    <div class="footer-links"><h3>Information</h3><a href="index.html#our-approach">Our approach</a><a href="index.html#difference">What to expect</a><a href="index.html#faq">FAQs</a><a href="index.html#appointment">Appointment request</a></div>
+    <div class="footer-note"><h3>Before you visit</h3><p>Use the appointment request to tell us what your vehicle needs. The shop will need to confirm service availability, timing, and any estimate before work begins.</p></div>
+  </div>
+  <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© <span id="current-year"></span> AutoCare Garage</span><span>Service details and contact information should be confirmed before launch.</span><a href="#top">Back to top ↑</a></div></div>
+</footer>
+<script src="script.js"></script>
+<script src="service.js"></script>
+</body>
+</html>
