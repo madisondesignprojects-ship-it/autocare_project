@@ -659,3 +659,284 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
   .why-grid{grid-template-columns:1fr}
   .why-grid article:last-child{grid-column:auto}
 }
+
+
+/* Premium art direction pass: fewer generic blocks, stronger brand and more deliberate rhythm. */
+:root{
+  --pine:#173a32;--pine-deep:#0a211d;--pine-mid:#295449;
+  --sage:#b9d0bd;--sage-light:#dfe9df;--cream:#f4eddf;--cream-deep:#e8dcc4;
+  --paper:#fcfaf5;--ink:#15251f;--muted:#65746a;--line:#ccd7cb;
+  --orange:#ed603b;--orange-dark:#cf4929;--gold:#e4b75f;
+  --shadow:0 28px 70px rgba(9,32,26,.18);--shadow-small:0 12px 30px rgba(9,32,26,.11);
+}
+/* The navigation becomes part of the brand, not a white strip floating above it. */
+.site-header{background:var(--pine-deep);border-bottom:1px solid #ffffff1a;box-shadow:0 8px 24px #06171335}
+.brand{color:#fff}
+.brand-mark{background:var(--sage);color:var(--pine-deep);border-radius:2px 11px 2px 2px;position:relative}
+.brand-mark:after{content:"";position:absolute;inset:-5px 5px 5px -5px;border:1px solid #b9d0bd65;pointer-events:none}
+.brand-type strong{font-size:25px;letter-spacing:-.075em}
+.brand-type small{color:#a5b9ab;letter-spacing:.25em}
+.main-nav>a,.nav-trigger{color:#edf3ed;font-size:11px}
+.main-nav>a:after,.nav-trigger:after{bottom:22px}
+.header-social a{color:#e5eee7;border-color:#ffffff39}
+.header-social a:hover{color:var(--pine);background:var(--sage);border-color:var(--sage)}
+.menu-toggle{background:var(--orange)}
+.location-strip{background:#e9e2d2;border-bottom:1px solid #d5cbb6}
+.location-pin{border-color:#9eb8a3;color:var(--pine)}
+.location-current small{color:#607369}
+.location-current b{color:var(--pine)}
+.location-change{border-color:#92a997}
+.utility-bar{background:#061713}
+.header-cta{box-shadow:0 5px 0 #00000020}
+.mega-menu{border-top-width:5px}
+.mega-content{padding:29px 31px 20px}
+.mega-common-links>a{background:#e4ece2}
+.mega-common-links>a:hover{background:#c6dac8}
+.mega-promo{background:#f0e7d5}
+.quick-links{background:#183d34;border-top:1px solid #ffffff13;border-bottom:3px solid var(--orange)}
+.quick-links a{font-size:10px;letter-spacing:.1em}
+.quick-icon{color:#f2bc65}
+
+/* Hero: full-bleed image with a large, confident headline and a restrained graphic system. */
+.reference-hero,.reference-hero-inner{min-height:min(790px,calc(100vh - 150px));}
+.reference-hero{background:#071b17}
+.reference-hero-photo{inset:0 0 0 18%;background-image:url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=2400&q=90");background-position:center 54%;filter:saturate(.76) contrast(1.06)}
+.reference-hero-overlay{background:linear-gradient(90deg,#081b17 0%,#081b17 23%,#081b17e8 39%,#081b17a8 60%,#081b1750 100%),linear-gradient(0deg,#081b17d9 0%,transparent 46%)}
+.reference-hero:before{width:6px;background:var(--orange)}
+.reference-hero:after{right:5%;top:14%;width:clamp(170px,20vw,295px);height:clamp(170px,20vw,295px);border-color:#f5eddf59;box-shadow:0 0 0 22px #f5eddf0c,0 0 0 46px #f5eddf09}
+.reference-hero-inner{padding-top:82px;padding-bottom:105px}
+.reference-hero-copy{width:min(760px,75%)}
+.reference-kicker{color:#d1e4d4;font-size:10px;letter-spacing:.22em;margin-bottom:30px}
+.reference-kicker:before{width:43px}
+.reference-hero h1{font-size:clamp(4.5rem,8.7vw,8.1rem);line-height:.88;letter-spacing:-.095em;margin-bottom:31px;max-width:900px}
+.reference-hero h1 em{color:var(--sage);position:relative}
+.reference-hero-copy>p{max-width:490px;font-size:16px;line-height:1.8;color:#d8e0d9}
+.reference-hero-actions{gap:13px}
+.reference-hero-actions .btn{min-height:59px;padding-left:25px;padding-right:25px}
+.reference-hero-badge{right:clamp(20px,5vw,75px);bottom:50px;min-width:260px;padding:17px 20px;border-left-width:5px}
+.reference-hero-badge .badge-icon{width:49px;height:49px;font-size:16px}
+.reference-hero-badge b{font-size:15px}
+.reference-hero-badge small{font-size:10px}
+
+/* Add editorial page markers and horizontal rules without changing any content hooks. */
+.reference-intro,.reference-text-section,.reference-feature-section,.reference-inspection,
+#community,.reference-faq,.reference-awards,.reference-amenities,.reference-why,
+.reference-owner,.reference-service-directory,.reference-specials,.appointment-section,.reviews-section{isolation:isolate}
+.reference-intro:after,.reference-text-section:after,.reference-feature-section:after,
+.reference-faq:after,.reference-why:after,.reference-service-directory:after{
+  content:"";position:absolute;top:0;left:0;width:clamp(44px,7vw,100px);height:5px;background:var(--orange);z-index:-1
+}
+.reference-intro{padding-top:130px;padding-bottom:135px;background:#c5d8c6}
+.reference-intro:before{top:38px;right:5.2%;color:#2b594b;font-size:9px;letter-spacing:.23em}
+.reference-intro-grid{grid-template-columns:1.05fr .85fr;gap:clamp(55px,9vw,145px)}
+.reference-intro-text h2{font-size:clamp(3.1rem,5.15vw,5.2rem);line-height:.98;margin-bottom:25px}
+.reference-intro-text h3{font-size:20px;color:#264a3d;max-width:520px}
+.reference-intro-text p{font-size:14px;line-height:1.85;color:#304b3e;max-width:570px}
+.reference-intro-image-wrap{padding:0 0 54px 35px}
+.reference-intro-image-wrap:before{left:0;top:35px;bottom:0;width:78%;background:#f0e5cf}
+.reference-intro-image-wrap:after{right:-26px;top:-26px;width:42%;height:48%;border:1px solid #fbf8ed}
+.reference-intro-image{height:520px;object-position:center;filter:saturate(.77) contrast(1.02)}
+.image-caption{margin:-43px 0 0 -24px;padding:20px 23px;min-width:315px}
+.caption-symbol{width:43px;height:43px}
+
+/* Cream section gets texture from typography and generous whitespace, not extra cards. */
+.reference-text-section{padding:122px 0;background:#f5eedf}
+.reference-text-section.alt{background:#e2ece1}
+.reference-text-grid{grid-template-columns:1fr 1.02fr;gap:clamp(55px,9vw,145px)}
+.reference-text-grid h2{font-size:clamp(3.1rem,5.4vw,5.3rem);line-height:.94;max-width:600px}
+.reference-text-grid>div:last-child{position:relative;border-left:0;padding-left:40px}
+.reference-text-grid>div:last-child:before{content:"";position:absolute;left:0;top:3px;bottom:3px;width:3px;background:var(--orange)}
+.reference-text-grid p{font-size:14px;line-height:1.9;color:#4d5e52}
+.reference-text-grid .reference-lead{font-size:23px;line-height:1.35;color:var(--pine);max-width:550px}
+#team{background:#d7e4d7}
+#community{background:#163b32;padding:118px 0}
+#community .reference-text-grid>div:last-child:before{background:var(--orange)}
+#community h2{font-size:clamp(3rem,5.2vw,5rem)}
+#community .reference-text-grid p{font-size:14px;line-height:1.85}
+#ev-services{background:#f1e6d0}
+
+/* Image-led feature treatment with stronger contrast between the two columns. */
+.reference-feature-section{padding:125px 0;background:#f8f3e9}
+.reference-feature-grid{grid-template-columns:1.04fr .86fr;gap:clamp(55px,9vw,140px)}
+.reference-feature-image{padding:0 0 42px 42px}
+.reference-feature-image:before{top:-18px;left:-18px;width:73%;height:68%;background:#bed3c2}
+.reference-feature-image img{height:550px;filter:saturate(.76) contrast(1.03)}
+.feature-image-label{right:-28px;bottom:0;padding:20px 25px}
+.feature-image-label span{font-size:16px}
+.reference-feature-copy h2{font-size:clamp(3.05rem,5.1vw,5.1rem);line-height:.95}
+.reference-feature-copy .reference-lead{font-size:23px}
+.reference-feature-copy p{line-height:1.85;font-size:14px}
+.reference-feature-copy .btn{margin-top:24px}
+
+/* The diagnostic section reads as a designed technical panel. */
+.reference-inspection{padding:120px 0;background:#0c2722}
+.reference-inspection:after{content:"";position:absolute;right:0;top:0;bottom:0;width:7px;background:var(--orange)}
+.inspection-grid{grid-template-columns:.88fr 1.12fr;gap:clamp(45px,8vw,120px)}
+.inspection-copy h2{font-size:clamp(3rem,5.3vw,5.15rem);line-height:.94}
+.inspection-copy .eyebrow{color:var(--sage)}
+.inspection-copy p{font-size:14px;line-height:1.85}
+.inspection-card-list{gap:10px}
+.inspection-card-list article{min-height:152px;padding:25px 24px;background:#17372f;border:1px solid #78978645}
+.inspection-card-list article:before{width:3px}
+.inspection-card-list article span{margin-bottom:14px}
+.inspection-card-list article b{font-size:16px}
+.inspection-card-list article p{font-size:12px;line-height:1.65}
+
+/* FAQ and directory styling gains editorial numbering, crisp separators and warmer surfaces. */
+.reference-faq{padding:122px 0;background:#f5eedf}
+.reference-faq-grid{gap:clamp(55px,9vw,140px)}
+.reference-faq-grid>div:first-child h2{font-size:clamp(3rem,5vw,4.7rem);line-height:.95}
+.faq-list{border-color:#aebdad}
+.faq-list details{border-color:#aebdad}
+.faq-list summary{font-size:15px;padding:23px 0;color:#183c32}
+.faq-list summary span{width:31px;height:31px}
+.faq-list details p{font-size:13px;line-height:1.8}
+.reference-awards{padding:102px 0;background:#dce8dc}
+.awards-heading{max-width:760px;margin-bottom:48px}
+.awards-heading h2{font-size:clamp(3rem,4.8vw,4.5rem)}
+.awards-heading p{font-size:13px}
+.award-list{border-color:#a9bea9}
+.award-list>div{border-color:#a9bea9;min-height:185px}
+.award-seal{width:61px;height:61px;border-color:#789780;background:#eff3e9}
+.reference-amenities{padding:112px 0;background:#1a4337}
+.amenities-heading{margin-bottom:45px}
+.amenities-heading h2{font-size:clamp(3rem,5vw,4.8rem)}
+.amenities-heading>p{font-size:14px;line-height:1.8}
+.reference-amenities-grid{border-color:#ffffff2c}
+.reference-amenities-grid article{min-height:140px;padding:23px 25px;border-color:#ffffff2c}
+.reference-amenities-grid article span{font-size:27px;color:#c5d8c6}
+.reference-amenities-grid article b{font-size:14px}
+.reference-why{padding:120px 0;background:#f6f0e3}
+.why-heading{max-width:780px;margin-bottom:58px}
+.why-heading h2{font-size:clamp(3rem,5vw,4.65rem)}
+.why-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid #c8d0c3;border-bottom:1px solid #c8d0c3}
+.why-grid article{background:transparent;border:0;border-right:1px solid #c8d0c3;min-height:270px;padding:27px 22px;box-shadow:none!important}
+.why-grid article:last-child{border-right:0}
+.why-grid article:hover{transform:translateY(-4px);background:#e9eee4}
+.why-icon{width:47px;height:47px;border-radius:50%;background:var(--pine);margin-bottom:25px}
+.why-icon:after{border-radius:50%;right:-5px;bottom:-5px}
+.why-grid h3{font-size:16px}
+.why-grid p{font-size:12px;line-height:1.7}
+
+/* Owner story becomes a branded feature rather than another white card. */
+.reference-owner{padding:125px 0;background:#bfd4c2}
+.owner-grid{gap:clamp(55px,9vw,140px)}
+.owner-photo{padding:34px 0 0 34px}
+.owner-photo:before{left:0;top:0;background:#f2e7d2;width:73%;height:72%}
+.owner-photo img{height:525px;filter:saturate(.76);object-position:center}
+.owner-photo-badge{left:-13px;bottom:24px;padding:18px 26px;font-size:13px}
+.owner-copy h2{font-size:clamp(3.1rem,5.1vw,5.1rem);line-height:.95}
+.owner-copy>p{font-size:14px;line-height:1.85}
+.owner-copy .owner-lead{font-size:23px}
+.owner-facts{gap:12px 22px;font-size:12px}
+
+/* Services: architectural grid with generous touch targets, no rounded-box template feel. */
+.reference-service-directory{padding:120px 0;background:#f0e6d4}
+.service-directory-heading h2{font-size:clamp(3rem,5vw,4.8rem);line-height:.95}
+.directory-intro{font-size:14px;line-height:1.85;margin:28px 0 42px}
+.reference-service-list{grid-template-columns:repeat(3,minmax(0,1fr));border-color:#c9c5b6}
+.reference-service-list a{min-height:83px;padding:19px 22px;border-color:#c9c5b6;font-size:14px}
+.reference-service-list a span{font-size:22px;transition:transform .2s}
+.reference-service-list a:hover{padding-left:27px}
+.reference-service-list a:hover span{transform:translateX(4px)}
+.reference-specials{padding:90px 0;background:#09221d}
+.specials-inner h2{font-size:clamp(3rem,4.7vw,4.5rem);line-height:.95}
+.specials-inner p{font-size:14px;line-height:1.8}
+.specials-inner>.btn{min-width:230px}
+
+/* Appointment experience: one elegant panel, clear field focus, no dashboard-like clutter. */
+.appointment-section{padding:120px 0;background:#c3d8c6}
+.appointment-intro h2{font-size:clamp(3rem,5vw,4.8rem);line-height:.95}
+.appointment-intro>p{font-size:14px;line-height:1.85}
+.appointment-contact{background:#edf2e9;border-left-width:4px;padding:18px}
+.appointment-form{border:0;box-shadow:0 25px 80px #183b2e28}
+.form-title h3{font-size:30px}
+.form-grid{gap:17px}
+.form-grid input,.form-grid select,.form-grid textarea{min-height:46px;border-radius:0;background:#f8f8f1}
+.form-grid label{font-size:11px}
+.form-actions{margin-top:28px;padding-top:24px}
+.reviews-section{padding:120px 0;background:#f3ecdd}
+.reviews-intro h2{font-size:clamp(3rem,5vw,4.8rem);line-height:.94}
+.reviews-intro p{font-size:14px;line-height:1.85}
+.review-carousel{min-height:350px;padding:42px 45px 30px;border-top:5px solid var(--orange);background:#12382f}
+.review-quote{font-size:clamp(1.45rem,2.3vw,2.1rem);line-height:1.38}
+.review-controls button{border-radius:50%}
+
+/* Footer and service pages keep the same art direction throughout. */
+.site-footer{background:#081b17}
+.footer-main{padding-top:80px;padding-bottom:70px}
+.footer-main h3{font-size:13px}
+.footer-main a:not(.brand):not(.footer-mail){font-size:12px}
+.payments-inner{color:#9eb8a6}
+.footer-bottom{color:#82998a}
+.service-page-hero{min-height:455px}
+.service-page-hero-bg{background-image:linear-gradient(90deg,#0a211df5,#0a211d96),url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=2000&q=90")}
+.service-page-hero h1{font-size:clamp(3.2rem,6.2vw,6rem);line-height:.93}
+.service-breadcrumb-band{background:#dce8dc}
+.service-detail-layout{gap:clamp(35px,6vw,85px);padding-top:95px;padding-bottom:100px}
+.service-detail-main h2{font-size:clamp(2.8rem,4.4vw,4rem)}
+.service-detail-main p{line-height:1.9}
+.service-detail-sidebar{top:120px}
+.service-sidebar-card{padding:28px;border-top-width:5px}
+.service-faq-section{padding:95px 0;background:#f4eddf}
+.service-next-cta{padding:75px 0;background:#c1d6c4}
+@media(max-width:1120px){
+ .main-nav{gap:12px}
+ .reference-hero h1{font-size:clamp(4rem,8vw,6.5rem)}
+ .why-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .why-grid article:nth-child(3){border-right:0}
+ .why-grid article:nth-child(n+4){border-top:1px solid #c8d0c3}
+}
+@media(max-width:930px){
+ .site-header{background:var(--pine-deep)}
+ .main-nav{background:var(--paper)}
+ .main-nav>a,.nav-trigger{color:var(--pine)}
+ .reference-hero,.reference-hero-inner{min-height:640px}
+ .reference-hero h1{font-size:clamp(3.7rem,10vw,6rem)}
+ .reference-intro,.reference-text-section,.reference-feature-section,.reference-inspection,#community,.reference-faq,.reference-awards,.reference-amenities,.reference-why,.reference-owner,.reference-service-directory,.reference-specials,.appointment-section,.reviews-section{padding-top:82px;padding-bottom:82px}
+ .reference-intro-grid,.reference-feature-grid,.owner-grid{gap:45px}
+ .reference-intro-image{height:420px}
+ .reference-feature-image img,.owner-photo img{height:420px}
+ .reference-text-grid{gap:45px}
+ .reference-text-grid>div:last-child{padding-left:28px}
+ .reference-amenities-grid article{min-height:120px}
+ .why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .why-grid article:nth-child(2n){border-right:0}
+ .why-grid article:nth-child(3){border-right:1px solid #c8d0c3}
+ .why-grid article:nth-child(n+3){border-top:1px solid #c8d0c3}
+ .why-grid article:last-child{grid-column:1/-1}
+}
+@media(max-width:640px){
+ .brand-type strong{font-size:20px}
+ .reference-hero,.reference-hero-inner{min-height:680px}
+ .reference-hero-photo{inset:0;background-position:58% center}
+ .reference-hero-overlay{background:linear-gradient(90deg,#081b17f5 0%,#081b17dc 70%,#081b1796 100%),linear-gradient(0deg,#081b17d9,transparent 60%)}
+ .reference-hero-inner{padding-top:90px;padding-bottom:145px}
+ .reference-hero h1{font-size:clamp(3.2rem,14vw,5rem)}
+ .reference-hero-copy>p{font-size:14px}
+ .reference-hero-badge{bottom:20px;left:17px;right:auto}
+ .reference-intro,.reference-text-section,.reference-feature-section,.reference-inspection,#community,.reference-faq,.reference-awards,.reference-amenities,.reference-why,.reference-owner,.reference-service-directory,.reference-specials,.appointment-section,.reviews-section{padding-top:65px;padding-bottom:66px}
+ .reference-intro-grid,.reference-feature-grid,.owner-grid,.reference-text-grid{grid-template-columns:1fr;gap:35px}
+ .reference-intro-text h2,.reference-feature-copy h2,.owner-copy h2,.reference-text-grid h2{font-size:clamp(2.65rem,11vw,3.8rem)}
+ .reference-intro-image{height:330px}
+ .reference-feature-image img,.owner-photo img{height:330px}
+ .reference-text-grid>div:last-child{padding-left:22px}
+ .reference-text-grid .reference-lead,.reference-feature-copy .reference-lead,.owner-copy .owner-lead{font-size:19px}
+ .reference-amenities-grid{grid-template-columns:repeat(2,1fr)}
+ .reference-amenities-grid article{min-height:105px;padding:15px}
+ .why-grid{grid-template-columns:1fr 1fr}
+ .why-grid article{padding:18px 14px;min-height:0}
+ .why-grid article:nth-child(2n){border-right:0}
+ .why-grid article:nth-child(3){border-right:1px solid #c8d0c3}
+ .why-grid article:last-child{grid-column:1/-1}
+ .reference-service-list{grid-template-columns:1fr}
+ .service-directory-heading h2{font-size:2.8rem}
+ .specials-inner{display:block}
+ .specials-inner h2{font-size:2.8rem}
+ .specials-inner>.btn{width:100%;margin-top:24px}
+ .form-step{padding:25px 18px}
+ .review-carousel{padding:27px 21px 22px}
+ .footer-main{padding-top:52px}
+ .service-detail-layout{padding-top:55px;padding-bottom:60px}
+ .service-page-hero h1{font-size:clamp(2.7rem,12vw,4.1rem)}
+}
