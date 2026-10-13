@@ -308,3 +308,162 @@ body{font-family:var(--sans);font-size:15px;color:#2a353b;line-height:1.65}
  .reviews-section{padding:48px 0}.reviews-layout{grid-template-columns:1fr;gap:25px}.reviews-intro h2{font-size:31px}.review-carousel{padding:20px 16px}.review-quote{font-size:13px}.footer-main{grid-template-columns:1fr 1fr;gap:22px 15px}.footer-brand-col{grid-column:1/-1}.payments-inner{align-items:flex-start;flex-direction:column;padding:14px 0}.payments-inner>div{gap:6px;flex-wrap:wrap}.payments-inner b{font-size:8px}.footer-bottom{flex-direction:column;gap:8px}.footer-bottom span:last-child{display:none}
 }
 @media(max-width:380px){.container{width:calc(100% - 26px)}.brand-type strong{font-size:19px}.reference-hero h1{font-size:34px}.reference-amenities-grid article{align-items:flex-start;flex-direction:column}.why-grid{grid-template-columns:1fr}.why-grid article{min-height:unset}.award-list b{font-size:9px}}
+
+
+/* Color balance pass: deeper automotive greens/blues and warm neutral surfaces */
+:root{
+ --navy:#183947;
+ --deep:#102a35;
+ --blue:#2b5860;
+ --orange:#c95838;
+ --orange-dark:#a84329;
+ --ink:#26383e;
+ --muted:#667674;
+ --paper:#edf1ec;
+ --cream:#f5f0e7;
+ --line:#d3ddd6;
+}
+body{background:#f2f3ee;color:#26383e}
+.utility-bar{background:#0e2630;color:#d7e1dc;border-bottom:1px solid #0a2029}
+.utility-left a,.utility-links a{color:#e3ebe6}
+.utility-links>span{background:#ffffff35}
+.utility-left .utility-separator{color:#7e9996}
+.location-strip{background:#234752;color:#e6eee8;border-color:#365d64}
+.location-current small{color:#b9cbc3}
+.location-current b{color:#fff}
+.location-pin{background:#355b63;color:#fff}
+.location-change{border-color:#55747a;color:#f2f5ef}
+.location-hours{color:#c5d5cd}
+.site-header{background:#183b46;border-bottom-color:var(--orange)}
+.site-header .brand-mark{background:var(--orange);color:white}
+.site-header .brand-type strong{color:#fff}
+.site-header .brand-type small{color:#b4c6c0}
+.main-nav{color:#eff3ef}
+.nav-trigger{color:#eff3ef}
+.main-nav>a:hover,.nav-trigger:hover{color:#f2a184}
+.header-social a{border-color:#68858a;color:#f1f4ef}
+.header-social a:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.menu-toggle span{background:#fff}
+.quick-links{background:#244953;border-color:#375c63}
+.quick-links-inner>a,.quick-links-inner>a:first-child{border-color:#47666b}
+.quick-links-inner>a:hover{background:#315963}
+.quick-icon{background:#183b46;border-color:#64817f;color:#f2a184}
+.quick-links b{color:#fff}
+.quick-links small{color:#c5d3cc}
+.quick-links strong{color:#f2a184}
+.reference-hero-overlay{background:linear-gradient(90deg,rgba(8,28,36,.91) 0%,rgba(12,39,47,.72) 53%,rgba(12,39,47,.33) 100%),linear-gradient(0deg,rgba(6,26,35,.38),transparent 44%)}
+.reference-hero h1 em{color:#f2a17f}
+.btn-orange{background:var(--orange)}
+.btn-orange:hover{background:var(--orange-dark)}
+.btn-outline-light{border-color:#ffffffa8}
+.reference-intro{background:#e8eee8}
+.reference-intro-text h2,.reference-text-grid h2,.reference-feature-copy h2,.reference-amenities h2,.why-heading h2,.owner-copy h2,.service-directory-heading h2,.reviews-intro h2{color:var(--navy)}
+.reference-intro-text h3{color:#375256}
+.reference-intro-text p{color:#506764}
+.reference-intro-image-wrap:before{background:#d5e0d8}
+.image-caption{background:#f8f6ef}
+.reference-text-section{background:#dfe8e2;border-color:#d5dfd8}
+#ev-services{background:#dce6e1}
+#team{background:#e0e9e6}
+#community{background:#244851;border-color:#244851}
+#community .eyebrow{color:#d8e6de}
+#community h2{color:#fff}
+#community h2 em{color:#f2a184}
+#community p{color:#d3e0d9}
+#community .text-link{color:#f2a184}
+.reference-feature-section{background:#f0f1eb}
+.reference-feature-image:before{background:#d8e2db}
+.reference-feature-copy p{color:#546763}
+.reference-inspection{background:#183d4a}
+.reference-inspection:after{border-color:#ffffff1b;box-shadow:0 0 0 40px #ffffff08,0 0 0 80px #ffffff04}
+.inspection-copy h2 em{color:#f2a184}
+.inspection-card-list{background:#e7eee8}
+.inspection-card-list article{border-color:#ccd9d2}
+.inspection-card-list h3{color:#183947}
+.inspection-card-list p{color:#586c67}
+.reference-faq{background:#e3eae5}
+.reference-faq .faq-list{border-color:#cbd7d0}
+.reference-faq .faq-list details{border-color:#cbd7d0}
+.reference-faq .faq-list summary span{background:#f7f5ef;border-color:#cbd7d0}
+.reference-awards{background:#f1efe7;border-color:#e2e1d7}
+.award-list{border-color:#d7ddd5}
+.award-list>div{border-color:#d7ddd5}
+.award-seal{border-color:#a9bab0;background:#e5ebe4}
+.reference-amenities{background:#244851;color:#f4f3ec}
+.reference-amenities h2{color:#fff}
+.reference-amenities h2 em{color:#f2a184}
+.amenities-heading>p{color:#d2e0d9}
+.reference-amenities-grid{background:#193b45;border-color:#45656a}
+.reference-amenities-grid article{background:#e5ece5;border-color:#d5e0d8}
+.reference-amenities-grid article:hover{background:#f1e8dd}
+.reference-amenities-grid article span{background:#d0ded5;color:#214752}
+.reference-amenities-grid article b{color:#193b45}
+.reference-why{background:#e8ede7}
+.why-grid article{background:#dce5de;border-color:#ccd8d0}
+.why-grid article:hover{background:#eef1e8;border-color:#d28b70}
+.why-icon{background:#cbdcd1;color:var(--orange-dark)}
+.why-grid h3{color:#183947}
+.why-grid p{color:#566a63}
+.reference-owner{background:#193a46;color:#ecf1ec}
+.reference-owner .owner-copy h2{color:#fff}
+.reference-owner .owner-copy h2 em{color:#f2a184}
+.reference-owner .owner-copy .eyebrow{color:#d2e1da}
+.reference-owner .owner-copy .owner-lead{color:#f1f4ef}
+.reference-owner .owner-copy>p:not(.owner-lead){color:#cddad4}
+.reference-owner .owner-facts span{color:#e0e9e2}
+.reference-owner .owner-photo:before{background:#53766f}
+.reference-owner .owner-photo-badge{background:var(--orange)}
+.reference-service-directory{background:#e9eee8}
+.reference-service-list{border-color:#cbd6cf}
+.reference-service-list a{background:#f1f2ec;border-color:#cbd6cf;color:#405b57}
+.reference-service-list a:hover{background:#dbe7df;color:var(--orange-dark)}
+.reference-specials{background:#102a35}
+.specials-inner h2 em{color:#f2a184}
+.appointment-section{background:#dce6e4}
+.appointment-form{background:#f8f7f1;border-color:#cbd8d3}
+.form-progress{background:#d8e2dc}
+.form-grid input,.form-grid select,.form-grid textarea{background:#fffefa;border-color:#cbd7d1}
+.form-title h3{color:#183947}
+.appointment-intro h2{color:#183947}
+.reviews-section{background:#183b46;color:#e9f0eb}
+.reviews-intro h2{color:#fff}
+.reviews-intro h2 em{color:#f2a184}
+.reviews-intro>p{color:#cbd9d3}
+.reviews-intro .eyebrow{color:#d2dfd8}
+.review-carousel{background:#e6ece5;border-color:#69827e;border-top-color:var(--orange)}
+.review-quote{color:#183947}
+.review-bottom b{color:#183947}
+.review-bottom small{color:#63746d}
+.review-counter{color:#63746d}
+.review-controls button{background:#f8f6ef;border-color:#c8d4cd}
+.review-dots span{background:#aebfb3}
+.review-dots span.active{background:var(--orange)}
+.site-footer{background:#0d252f}
+.footer-payments{background:#0a1e27}
+.payments-inner b{border-color:#47636a;color:#d7e2dc}
+
+/* Mega-menus stay light for readability while their surrounding navigation is dark. */
+.mega-menu{background:#f8f7f1;border-top-color:var(--orange)}
+.mega-common{border-color:#d8e0d9}
+.mega-common-links>a{background:#e9eee7;border-color:#d4ded6}
+.mega-common-links>a:hover{background:#fff9f1;border-color:#ce8b75}
+.mega-icon{background:#dce7df;color:#1c4650}
+.mega-directory-columns a{color:#455d59;border-color:#e0e5dd}
+.mega-promo{background:#e4ebe4}
+.mega-promo:hover{background:#d9e4db}
+.mega-promo b{color:#183947}
+.mega-promo small{color:#5c7069}
+.mega-view-all,.mega-common-head a{color:var(--orange-dark)}
+.about-mega .mega-content{background:#f8f7f1}
+
+/* Keep the mobile drawer dark, but keep each expanded mega-menu readable. */
+@media(max-width:930px){
+ .main-nav.mobile-open{background:#183b46}
+ .main-nav>a:not(.header-cta){color:#f1f4ef;border-color:#3d5b63}
+ .main-nav>a:not(.header-cta):hover{color:#f2a184}
+ .nav-item{border-color:#3d5b63}
+ .nav-trigger{color:#f1f4ef}
+ .mega-menu{background:#f8f7f1;border-color:#d5ded7}
+ .mega-directory-heading>span:last-child{color:#687973}
+}
+@media(prefers-reduced-motion:reduce){.reference-hero-photo{animation:none;transform:none}}
