@@ -64,7 +64,7 @@
 
   // Add restrained scroll reveals to content cards and major sections.
   const revealTargets = document.querySelectorAll(
-    '.intro-copy, .intro-photo-wrap, .service-card, .ev-content, .concierge-copy, .concierge-photo, .quality-points article, .amenities-grid article, .difference-copy, .difference-image, .community-content, .directory-links a, .faq-list details, .review-carousel'
+    '.reference-intro-text, .reference-intro-image-wrap, .reference-text-grid > div, .reference-feature-image, .reference-feature-copy, .inspection-copy, .inspection-card-list article, .reference-faq-grid > div, .award-list > div, .reference-amenities-grid article, .why-grid article, .owner-photo, .owner-copy, .reference-service-list a, .specials-inner > div, .appointment-intro, .appointment-form, .reviews-intro, .review-carousel'
   );
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver(entries => {
