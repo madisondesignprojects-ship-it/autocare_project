@@ -17,7 +17,6 @@
     const panel = item.querySelector('.mega-menu, .simple-dropdown');
     if (!trigger || !panel) return;
 
-    // Desktop hover is handled by CSS; this click behavior supports touch and keyboard users.
     trigger.addEventListener('click', event => {
       event.preventDefault();
       const isOpen = item.classList.contains('open');
@@ -43,9 +42,9 @@
       document.body.classList.toggle('menu-open', isOpen);
       if (!isOpen) closeMenus();
     });
+
     nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      // Internal anchors and service links close the mobile menu before navigation.
-      if (window.matchMedia('(max-width: 930px)').matches) {
+      if (window.matchMedia('(max-width: 850px)').matches) {
         nav.classList.remove('mobile-open');
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.setAttribute('aria-label', 'Open navigation');
@@ -62,37 +61,19 @@
   const year = document.querySelector('#current-year');
   if (year) year.textContent = new Date().getFullYear();
 
-  // Add restrained scroll reveals to content cards and major sections.
-  const revealTargets = document.querySelectorAll(
-    '.reference-intro-text, .reference-intro-image-wrap, .reference-text-grid > div, .reference-feature-image, .reference-feature-copy, .inspection-copy, .inspection-card-list article, .reference-faq-grid > div, .award-list > div, .reference-amenities-grid article, .why-grid article, .owner-photo, .owner-copy, .reference-service-list a, .specials-inner > div, .appointment-intro, .appointment-form, .reviews-intro, .review-carousel'
-  );
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
-    revealTargets.forEach(el => { el.classList.add('reveal'); observer.observe(el); });
-  }
-
-  // Two-step appointment request form. Demo only: no data is sent to a server.
+  // Two-step appointment-request preview. Wire a real endpoint before publishing.
   const form = document.querySelector('#appointment-form');
   if (form) {
     const steps = [...form.querySelectorAll('.form-step')];
     const progress = form.querySelector('.progress-fill');
-    const stepMarkers = [...document.querySelectorAll('.step-marker')];
+    const markers = [...document.querySelectorAll('.step-marker')];
     const status = form.querySelector('#form-status');
     const success = form.querySelector('.form-success');
-    let activeStep = 0;
 
     const setStep = index => {
-      activeStep = index;
       steps.forEach((step, i) => step.classList.toggle('active', i === index));
       if (progress) progress.style.width = index === 0 ? '50%' : '100%';
-      stepMarkers.forEach((marker, i) => marker.classList.toggle('active', i <= index));
+      markers.forEach((marker, i) => marker.classList.toggle('active', i <= index));
       if (status) status.textContent = '';
     };
 
@@ -120,11 +101,10 @@
 
     form.addEventListener('submit', event => {
       event.preventDefault();
-      if (!steps[1].querySelector('input[name="date"]').checkValidity() ||
-          !steps[1].querySelector('select[name="time"]').checkValidity() ||
-          !steps[1].querySelector('select[name="service"]').checkValidity()) {
-        const invalid = [...steps[1].querySelectorAll('input,select,textarea')].find(field => !field.checkValidity());
-        if (invalid) invalid.reportValidity();
+      const fields = [...steps[1].querySelectorAll('input,select,textarea')];
+      const invalid = fields.find(field => field.required && !field.checkValidity());
+      if (invalid) {
+        invalid.reportValidity();
         return;
       }
       steps.forEach(step => { step.hidden = true; step.classList.remove('active'); });
@@ -133,8 +113,7 @@
       if (status) status.textContent = '';
     });
 
-    const reset = form.querySelector('.reset-form');
-    if (reset) reset.addEventListener('click', () => {
+    form.querySelector('.reset-form')?.addEventListener('click', () => {
       form.reset();
       if (success) success.hidden = true;
       steps.forEach(step => { step.hidden = false; });
@@ -142,31 +121,34 @@
     });
   }
 
-  // Review carousel is intentionally populated with a clearly marked placeholder
-  // until approved, verified customer reviews are supplied by the shop.
-  const reviewData = [
-    { quote: 'Replace this sample with an approved, verified customer review before launch.', name: 'Customer testimonial placeholder', meta: 'Verified review to be added' },
-    { quote: 'Use this space for a real customer experience, with permission to publish the wording and name.', name: 'Customer testimonial placeholder', meta: 'Add an approved review' },
-    { quote: 'Honest feedback helps drivers know what to expect. Add an actual review before this site goes live.', name: 'Customer testimonial placeholder', meta: 'Add an approved review' }
+  // A service-process carousel replaces placeholder customer quotes until real reviews are supplied.
+  const slides = [
+    {quote:'Start with what you have noticed: a sound, a warning light, a change in the way the vehicle feels, or a service coming due.',name:'First, we listen.',meta:'01 — Understand the concern'},
+    {quote:'The recommendation should make sense to you. Ask what was found, why it matters, and what the estimate includes.',name:'Then, we explain.',meta:'02 — Review the findings'},
+    {quote:'You should have the information you need to decide how to proceed. If something is unclear, ask before authorizing the work.',name:'You decide.',meta:'03 — Choose the next step'}
   ];
-  let reviewIndex = 0;
+  let slideIndex = 0;
   const quote = document.querySelector('#review-quote');
-  const reviewName = document.querySelector('#review-name');
-  const reviewMeta = document.querySelector('#review-meta');
-  const reviewCounter = document.querySelector('#review-counter');
-  const showReview = index => {
-    reviewIndex = (index + reviewData.length) % reviewData.length;
-    const card = document.querySelector('.review-carousel');
+  const slideName = document.querySelector('#review-name');
+  const slideMeta = document.querySelector('#review-meta');
+  const slideCounter = document.querySelector('#review-counter');
+  const card = document.querySelector('.review-carousel');
+  const dots = [...document.querySelectorAll('.review-dots span')];
+
+  const showSlide = index => {
+    slideIndex = (index + slides.length) % slides.length;
     if (card) card.classList.add('review-changing');
     window.setTimeout(() => {
-      const review = reviewData[reviewIndex];
-      if (quote) quote.textContent = review.quote;
-      if (reviewName) reviewName.textContent = review.name;
-      if (reviewMeta) reviewMeta.textContent = review.meta;
-      if (reviewCounter) reviewCounter.textContent = String(reviewIndex + 1).padStart(2, '0') + ' / ' + String(reviewData.length).padStart(2, '0');
+      const slide = slides[slideIndex];
+      if (quote) quote.textContent = slide.quote;
+      if (slideName) slideName.textContent = slide.name;
+      if (slideMeta) slideMeta.textContent = slide.meta;
+      if (slideCounter) slideCounter.textContent = String(slideIndex + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === slideIndex));
       if (card) card.classList.remove('review-changing');
-    }, 130);
+    }, 100);
   };
-  document.querySelector('#review-prev')?.addEventListener('click', () => showReview(reviewIndex - 1));
-  document.querySelector('#review-next')?.addEventListener('click', () => showReview(reviewIndex + 1));
+
+  document.querySelector('#review-prev')?.addEventListener('click', () => showSlide(slideIndex - 1));
+  document.querySelector('#review-next')?.addEventListener('click', () => showSlide(slideIndex + 1));
 })();
